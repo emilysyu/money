@@ -1,0 +1,30 @@
+create database money default character set utf8;
+
+
+use money;
+
+
+
+-- 資料庫: `money`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `money`
+--
+
+CREATE TABLE IF NOT EXISTS `money` (
+  `序號` int(11) NOT NULL AUTO_INCREMENT,
+  `收入` int(11) NOT NULL,
+  `支出` int(11) NOT NULL,
+  `總結` int(11) NOT NULL,
+  `內容` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`序號`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+
+INSERT INTO `money` (`序號`, `收入`, `支出`, `總結`, `內容`) VALUES
+(1, 5000, 5000, 0, '沒錢'),
+(2, 5000, 1, 4999, '買一顆糖果');
